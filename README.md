@@ -165,9 +165,8 @@ pytest only runs small unit checks; correctness conclusions rest on the real run
 1. **FP32 rounding floor of the full K**: one FP32 full-K build carries an energy error of about 1.9e-7 on the water dimer and 2.2e-6 on water27, from coherent rounding on atom-centered grids. The final energy is guaranteed by the FP64 tail and is unaffected. The thresholds of the corresponding tests were changed to the measured floor plus margin (3e-7 for the water dimer, 3e-6 for water27); the new thresholds have not been run yet.
 2. **S1 is often ended by force**: the S1→S2 switch only looks at \|dE\| < 1e-6, so S1 often idles until its 8-cycle limit and the staged SCF takes about twice as many cycles as stock.
 3. **Performance work**: the full K rebuild when the FP64 tail starts (compute the FP64 K ahead of time in the background) and the VV10 kernel.
-4. **VV10 test-order dependence**: one VV10 test failed once in the 4090 `--experimental` suite and has not reproduced since; root cause unknown (low priority).
-5. **Gradients**: this package has no GPU gradient of its own; gradients come from stock PySCF on the converged orbitals and need the SGX grid response off (upstream bug).
-6. `experimental/cosx` (the K-side strategy layer) failed all of its gates; it is frozen and not imported by the mainline.
+4. **Gradients**: this package has no GPU gradient of its own; gradients come from stock PySCF on the converged orbitals and need the SGX grid response off (upstream bug).
+5. `experimental/cosx` (the K-side strategy layer) failed all of its gates; it is frozen and not imported by the mainline.
 
 ## Layout
 
