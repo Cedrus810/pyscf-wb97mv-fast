@@ -25,7 +25,7 @@ PySCF における **ωB97M-V / RIJCOSX（COSX, pjs=True）** の高速パスで
 
 ωB97M-V は、半局所 meta-GGA の交換相関、range-separated な厳密交換、VV10 非局所相関からなります。厳密交換ではクーロン演算子を ω = 0.3 bohr⁻¹ で短距離と長距離に分割します。
 
-$$\frac{1}{r} = \frac{\operatorname{erfc}(\omega r)}{r} + \frac{\operatorname{erf}(\omega r)}{r}$$
+$$\frac{1}{r} = \frac{\mathrm{erfc}(\omega r)}{r} + \frac{\mathrm{erf}(\omega r)}{r}$$
 
 短距離を 15%、長距離を 100% 取ります。erfc = 1 − erf なので、交換部分は次と等価です。
 

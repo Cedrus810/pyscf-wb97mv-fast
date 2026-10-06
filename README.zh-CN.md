@@ -25,7 +25,7 @@
 
 ωB97M-V 由半局域 meta-GGA 交换相关、range-separated 精确交换和 VV10 非局域相关组成。精确交换把库仑算符按 ω = 0.3 bohr⁻¹ 拆成短程和长程：
 
-$$\frac{1}{r} = \frac{\operatorname{erfc}(\omega r)}{r} + \frac{\operatorname{erf}(\omega r)}{r}$$
+$$\frac{1}{r} = \frac{\mathrm{erfc}(\omega r)}{r} + \frac{\mathrm{erf}(\omega r)}{r}$$
 
 短程取 15%、长程取 100%。由于 erfc = 1 − erf，交换部分等价于
 

@@ -25,7 +25,7 @@ A fast path for **ωB97M-V / RIJCOSX (COSX, pjs=True)** in PySCF. The heavy work
 
 ωB97M-V combines a semilocal meta-GGA exchange-correlation, range-separated exact exchange and VV10 nonlocal correlation. The exact exchange splits the Coulomb operator at ω = 0.3 bohr⁻¹:
 
-$$\frac{1}{r} = \frac{\operatorname{erfc}(\omega r)}{r} + \frac{\operatorname{erf}(\omega r)}{r}$$
+$$\frac{1}{r} = \frac{\mathrm{erfc}(\omega r)}{r} + \frac{\mathrm{erf}(\omega r)}{r}$$
 
 with 15% short-range and 100% long-range exact exchange. Since erfc = 1 − erf, this equals
 
