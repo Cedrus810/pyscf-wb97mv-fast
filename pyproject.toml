@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyscf-wb97mv-fast"
+version = "0.0.1"
+description = "Fast path for wB97M-V/RIJCOSX in PySCF: staged SCF with FP32 GPU VV10/XC/COSX-K and an FP64 tail"
+readme = "README.md"
+authors = [{ name = "Cedrus810" }]
+license = { text = "MIT" }
+requires-python = ">=3.12"
+dependencies = ["pyscf==2.14.0", "numpy", "scipy"]
+
+[tool.setuptools.packages.find]
+include = ["pyscf_wb97mv_fast*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: runs a full SCF or takes more than about one minute",
+    "experimental: frozen COSX-side test; opt-in via --experimental",
+    "gpu: needs CuPy and a CUDA GPU; skipped otherwise",
+]
