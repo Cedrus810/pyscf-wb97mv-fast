@@ -1,0 +1,25 @@
+# ---- internal working docs: local only, never published ----
+HANDOVER.md
+STATUS.md
+ENGINEERING_PLAN.md
+pyscf_wb97mv_consumer_gpu_plugin_plan.md
+/docs/2026-*.md
+/docs/superpowers/
+/.superpowers/
+
+# ---- runs, logs and machine-local data ----
+/jobs/
+/benchmarks/results/
+**/FINDINGS.md
+*.log
+*.nohup
+nohup.out
+*.so
+benchmarks/experimental/**/*.npy
+benchmarks/experimental/cosx/log_*.txt
+
+# ---- python / tooling ----
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
